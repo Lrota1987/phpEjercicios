@@ -12,8 +12,13 @@
         $manana = mktime(0,0,0, date("m"), date("d")+1, date("Y"));
         echo "<p>".date("d-m-Y", $manana)."</p>";
 
-        $hora = setlocale(LC_TIME,"");
-        echo "<p>".date("h:i:s", $hora)."</p>";
+        //date_default_timezone_set("Europe/Madrid");
+        echo "<p>".date("h:i:s")."</p>";
+
+        $horaLunes = strtotime("next monday");
+        echo "<p>".date("f\\e\c\h\a: d-m-Y", $horaLunes)."</p>";
+
+        
     ?>
 </body>
 </html>
