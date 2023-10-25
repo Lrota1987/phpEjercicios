@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<div>
-    <table>
+
 <?php
+
 function calendario_mensual ($anno, $mes) {
     $numberM=0;
     $mes=strtolower($mes);
@@ -29,8 +30,9 @@ function calendario_mensual ($anno, $mes) {
     $diasSem = ["L", "M", "X", "J", "V", "S", "D"];
     $diaS = date("N", strtotime("$anno-$numberM-1"))-1;
 
-    echo <<< EOT
-    
+    print "<div>";
+        print "<table>";
+        echo <<< EOT
             <tr>
                 <th colspan = "7">$mes</th>
             </tr>
@@ -62,13 +64,37 @@ function calendario_mensual ($anno, $mes) {
             }
             print "</tr>";
         }
+    
+        print "</table>";
+        print "</div>";
 }
 
 
-calendario_mensual(2023, "octubre");
+
+function construir_calendario ($anno) {
+    $cont = 0;
+    $meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+    print "<div id='calendario'>";
+        print "<h1 id='titulo'>".$anno."</h1>";
+        print "<table id='Tcalendario'>";
+        for ($i = 0 ; $i <= sizeof($meses) ; $i++) {
+            print "<tr class='columna'>";
+            for ($j = 0 ; $j<=3 ; $j++) {
+                if ($cont < 12) {
+                    print "<td>";
+                    calendario_mensual($anno, $meses[$cont]);
+                    print "</td>";
+                    $cont++;
+                } 
+            }   
+            print "</tr>";
+        }
+        print "</table>";
+    print "</div>";
+}
+
+construir_calendario(2023);
 ?>
-    </table> 
-</div>
 
 </body>
 </html>
