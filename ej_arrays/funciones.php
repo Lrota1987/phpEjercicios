@@ -28,7 +28,20 @@
         print "<img src='img/".$baraja[array_search($palo, $baraja)][array_search($carta, $palo)].".jpg' />";
     }
     
-    echo pintarCartas($baraja, $baraja[1], $baraja[1][3]);
+    function seleccionaCartas($baraja, $numCartas, $random) {
+        if ($random) {
+            for ($i = 0 ; $i<$numCartas ; $i++) {
+                $paloRandom=rand(0, 3);
+                $cartaRandom=rand(0,11);
+                pintarCartas($baraja, $baraja[$paloRandom], $baraja[$paloRandom][$cartaRandom]);
+            }
+        }
+        else {
+
+        }
+    }
+
+    seleccionaCartas($baraja, 5, true);
     ?>
 </body>
 </html>
