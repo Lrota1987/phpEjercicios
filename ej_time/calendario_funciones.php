@@ -10,7 +10,7 @@
 
 <?php
 
-function calendario_mensual ($anno, $mes) {
+function calendario_mensual ($mes, $clave, $anno) {
     $numberM=0;
     $mes=strtolower($mes);
     $meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
@@ -34,7 +34,7 @@ function calendario_mensual ($anno, $mes) {
         print "<table>";
         echo <<< EOT
             <tr>
-                <th colspan = "7">$mes</th>
+                <th colspan = "7" class="nombreMes">$mes</th>
             </tr>
             <tr>
             EOT;
@@ -82,7 +82,7 @@ function construir_calendario ($anno) {
             for ($j = 0 ; $j<=3 ; $j++) {
                 if ($cont < 12) {
                     print "<td>";
-                    calendario_mensual($anno, $meses[$cont]);
+                    calendario_mensual($meses[$cont], 0, $anno);
                     print "</td>";
                     $cont++;
                 } 
@@ -93,7 +93,21 @@ function construir_calendario ($anno) {
     print "</div>";
 }
 
-construir_calendario(2023);
+function escribir_tabla ($elemento, $clave, $anno) {
+    
+    
+    
+    if ($clave === 4 || $clave === 8 ) {
+        print "</tr><tr class='columna'>";
+    }
+
+        
+                print "<td>";
+                calendario_mensual($elemento, $clave, $anno);
+                print "</td>";
+}
+
+
 ?>
 
 </body>
