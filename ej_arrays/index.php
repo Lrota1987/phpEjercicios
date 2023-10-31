@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     
@@ -15,7 +16,7 @@
             <div class="BNumCartas">
                 <input type="number" name="numCartas" min="1" max="48" placeholder="Numero de cartas a buscar" />
                 <input type="radio" id="random" name="ranNoRan" value="true" />
-                <label for="random">Aleatorio</label>
+                <label for="random" id="aleat">Aleatorio</label>
                 <div class="noRan">
                     <input type="radio" id="noRan" name="ranNoRan" value="false" />
                     <label for="noRan">Elegir palo. </label>
@@ -48,16 +49,16 @@ if (isset($_POST['parteBaraja'])) {
     else {
         $arraypalos=[];
         if (!empty($_POST['oros'])) {
-            array_push($arraypalos, $_POST['oros']);
+            array_push($arraypalos, 'oros');
         }
-        elseif (!empty($_POST['copas'])) {
-            array_push($arraypalos, $_POST['copas']);
+        if (!empty($_POST['copas'])) {
+            array_push($arraypalos, 'copas');
         }
-        elseif (!empty($_POST['bastos'])) {
-            array_push($arraypalos, $_POST['bastos']);
+        if (!empty($_POST['bastos'])) {
+            array_push($arraypalos, 'bastos');
         }
-        elseif (!empty($_POST['espadas'])) {
-            array_push($arraypalos, $_POST['espadas']);
+        if (!empty($_POST['espadas'])) {
+            array_push($arraypalos, 'espadas');
         }
         seleccionaCartas($_POST['numCartas'], false, $arraypalos);
     }

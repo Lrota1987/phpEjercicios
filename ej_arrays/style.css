@@ -1,0 +1,33 @@
+img {
+    height: 10%;
+    width: 5%;
+    margin: 1%;
+}
+
+.BTodaBar {
+    position: absolute;
+
+}
+
+.BNumCartas {
+    position: absolute;
+    top:2vw;
+    width: 10vw;
+}
+
+#random {
+    position: inherit;
+    left: 35%;
+}
+
+#aleat {
+    position: inherit;
+    left: 49%;
+}
+
+.noRan {
+    position: inherit;
+    left: 35%;
+    width: 50vw;
+    
+}

@@ -22,7 +22,6 @@
         return $GLOBALS['baraja']=[$oros, $copas, $bastos, $espadas];
     }
 
-    $baraja = crearBaraja();
 
     function pintarCartas($baraja, $palo, $carta) {
         print "<img src='img/".$baraja[array_search($palo, $baraja)][array_search($carta, $palo)].".jpg' />";
@@ -52,40 +51,18 @@
             for ($i = 0 ; $i<$numCartas ; $i++) {
                 $repetido=false;
                 while ($repetido === false) {
-                    $j = rand(0, sizeof($palo)-1);
-                    if ($palo[$j] === "oros") {
-                        $cartaRandom=rand(0,11);
-                        if (!in_array($baraja[0][$cartaRandom], $arrayCartas)) {
-                            array_push($arrayCartas, $baraja[0][$cartaRandom]);
-                            pintarCartas($baraja, $baraja[0], $baraja[0][$cartaRandom]);
-                            $repetido = true;
+                    $j = rand(0, count($palo)-1);
+                    $baraja2 = ["oros", "copas", "bastos", "espadas"];
+                    foreach ($baraja2 as $key => $pal) {
+                        if ($palo[$j] === $pal) {
+                            $cartaRandom=rand(0,11);
+                            if (!in_array($baraja[$key][$cartaRandom], $arrayCartas)) {
+                                array_push($arrayCartas, $baraja[$key][$cartaRandom]);
+                                pintarCartas($baraja, $baraja[$key], $baraja[$key][$cartaRandom]);
+                                $repetido = true;
+                            }
                         }
                     }
-                    elseif ($palo[$j] === "copas") {
-                        $cartaRandom=rand(0,11);
-                        if (!in_array($baraja[1][$cartaRandom], $arrayCartas)) {
-                            array_push($arrayCartas, $baraja[1][$cartaRandom]);
-                            pintarCartas($baraja, $baraja[1], $baraja[1][$cartaRandom]);
-                            $repetido = true;
-                        }
-                    }
-                    elseif ($palo[$j] === "bastos") {
-                        $cartaRandom=rand(0,11);
-                        if (!in_array($baraja[2][$cartaRandom], $arrayCartas)) {
-                            array_push($arrayCartas, $baraja[2][$cartaRandom]);
-                            pintarCartas($baraja, $baraja[2], $baraja[2][$cartaRandom]);
-                            $repetido = true;
-                        }
-                    }
-                    elseif ($palo[$j] === "espadas") {
-                        $cartaRandom=rand(0,11);
-                        if (!in_array($baraja[3][$cartaRandom], $arrayCartas)) {
-                            array_push($arrayCartas, $baraja[3][$cartaRandom]);
-                            pintarCartas($baraja, $baraja[3], $baraja[3][$cartaRandom]);
-                            $repetido = true;
-                        }
-                    }
-                    
                 }
             }
         }
