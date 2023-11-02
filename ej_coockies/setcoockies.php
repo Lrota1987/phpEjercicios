@@ -1,5 +1,12 @@
 <?php
-setcookie('Fecha',date('Y-m-d H:i:s'), time() + 3600);
-setcookie('preferencias[idioma]','español');
-setcookie('preferencias[fondo]','rojo');
+if (!isset($_POST['idiomas'])) {
+    print "<p>Por favor rellene el formulario</p>";
+    header("refresh:5; url=./index.php");
+}
+else {
+    setcookie('idioma',$_POST['idiomas']);
+    setcookie('fondo',$_POST['colorFondo']);
+    header("refresh:1; url=./logeo.php");
+}
+
 ?>
