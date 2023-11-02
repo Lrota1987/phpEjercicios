@@ -35,6 +35,7 @@
             <input type="submit" value="Enviar" name="parteBaraja" />
         </form>
     </div>
+    <div class="cartas">
 <?php
 require("funciones.php");
 if (isset($_POST['todaBaraja'])) {
@@ -65,5 +66,6 @@ if (isset($_POST['parteBaraja'])) {
 }
 
 ?>
+</div>
 </body>
 </html>
