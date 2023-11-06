@@ -10,8 +10,11 @@
         <h2 id="textoCabeceraIndex">Configuración de coockies.</h2>
     </div>
     <?php
+    if (isset($_COOKIE['idioma'])) {
+        header('Location:./logeo.php');
+    }
     echo <<< EOT
-    <form action="./setcoockies.php" method="post" class="formulario_index">
+    <form action="./coockies/setcoockies.php" method="post" class="formulario_index">
         <div class="lenguaje">
             <label>Seleccione el lenguaje:</label></br>
             <input type="radio" id="español" name="idiomas" value="español" />
