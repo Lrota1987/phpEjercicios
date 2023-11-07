@@ -17,6 +17,7 @@
         $italiano=["usuario"=>"Utente", "contraseña"=> "password", "cabecera"=>"ID utente"];
         $portugues=["usuario"=>"Usuário","contraseña"=>"Senha", "cabecera"=>"ID do usuário"];
     */
+        
         $idiomaCoockie=$_COOKIE['idioma'];
         $data=file_get_contents("./idiomas/$idiomaCoockie.json");
         $palabras=json_decode($data);
