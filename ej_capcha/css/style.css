@@ -1,0 +1,27 @@
+body {
+    position: relative;
+    background-image: linear-gradient(red, yellow);
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    
+}
+
+.formulario {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color:royalblue;
+    border: 2px solid lightgray;
+    border-radius: 5%;
+    box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.342);
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 5%;
+}
+
+.submit {
+    margin-top: 15px;
+}
