@@ -16,7 +16,7 @@
                 $_REQUEST['clave'] == 'secreto') { //Son correctas las credenciales
                     //Se comprueba si son correctas las credenciales (user and password)
                     $_SESSION['identificativo'] = $_REQUEST['identificativo'];
-                    header('Location: informacion.php?' .SID);
+                    header('Location: informacion.php' );
                 }
                 else { //No son correctas las credenciales.
                     header('Location: acreditacion.php');
@@ -36,7 +36,7 @@
             }
         }
         else { //Ya está acreditado.
-            header('Location: informacion.php?' .SID);
+            header('Location: informacion.php');
         }
     ?>
 </body>

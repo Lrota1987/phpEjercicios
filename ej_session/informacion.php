@@ -18,10 +18,10 @@
             //Redirigimos a la página de acreditación.
             header('Location: ./acreditacion.php');
         }
-        if (!isset($_SESSION['identificativo'])) {
+        elseif (!isset($_SESSION['identificativo'])) {
             header('Location: acreditacion.php');
         }
-        echo '<a href="informacion.php?terminar_sesion=1">Terminar sesion</a><br />';
+        echo '<a href="informacion.php?terminar_sesion=156454">Terminar sesion</a><br />';
         echo '<a href="http://www.google.es">GOOGLE</a>';
     ?>
 </body>
