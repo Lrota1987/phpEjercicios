@@ -11,7 +11,6 @@
         if (!isset($_SESSION['identificativo'])) {//No está acreditado?
             if(isset($_REQUEST['identificativo']) && isset($_REQUEST['clave'])) {
                 //Ha rellenado el formulario??
-                print "hola";
                 if($_REQUEST['identificativo'] == 'juanfe' && 
                 $_REQUEST['clave'] == 'secreto') { //Son correctas las credenciales
                     //Se comprueba si son correctas las credenciales (user and password)

@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-size: 62.5%;
+    background-color: aquamarine;
+    position: relative;
+}
+
+input {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.contenido {
+    position: absolute;
+    padding: 3rem;
+    border-radius: 20px;
+    background-color: azure;
+    border: 2px solid blue;
+    margin: 4rem 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contenido, contenido * {
+    font-size: 1.6rem;
+}
+
+.contenido__cajaSecundaria {
+    border: 1px solid gray;
+    margin-left: 30px;
+    max-width: 40%;
+    padding: 20px;
+}
+
+.contenido__titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 160%;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+h2.contenido__titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 130%;
+    margin-bottom: 15px;
+}
+
+h3.contenido__titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    margin-bottom: 5px;
+}
+
+.contenido__tabla {
+    display: inline-block;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 2rem;
+}
+
+.contenido__tabla td, th {
+    border: 1px solid black;
+    padding: 0.8rem;
+}
+
+.contenido__tabla th {
+    background-color:bisque;
+}
+
+.contenido__lista {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.contenido__cajaTexto {
+    border: 1px solid gray;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.boton {
+    border-radius: 15px;
+    color: darkolivegreen;
+    background-color: silver;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    margin-top: 20px;
+    /* max-width: 120px; */
+}
+
+.boton--inline {
+    border-radius: 15px;
+    color: darkolivegreen;
+    background-color: silver;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin-top: 20px;
+    max-width: 120px;
+}
+
+.boton--link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.boton--derecha {
+    float: right;
+    right: 0;
+}
