@@ -7,6 +7,10 @@
 </head>
 <body>
 <?php
+    if (isset($_GET['valor']) && ($_GET['valor']>=2 && $_GET['valor']<=4 )) {
+        header("Location:./carpeta_Ejercicio".$_GET['valor']."");
+    }
+    else{
     echo <<< EOT
 
         <a href="./carpeta_Ejercicio2">Ir al ejercicio 2</a>
@@ -15,7 +19,7 @@
     </br>
         <a href="./carpeta_Ejercicio4">Ir al ejercicio 4</a>
     EOT;
-
+    }
     
 ?>
 </body>
