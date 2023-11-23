@@ -12,7 +12,7 @@
     print '<form action="" method="POST">';
         print '<div class="cambio">';
             print '<p>Importe</p>';
-            print '<input type="select" name="importe" required/>';
+            print '<input type="number" step="0.01" name="importe" required/>';
         print '</div>';
         print '<div class="cambio">';
             print '<p>De:</p>';

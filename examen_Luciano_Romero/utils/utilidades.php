@@ -52,7 +52,21 @@
                 imagefilledarc($img, 250, 250, 500, 500,$cont,$cont+$ancho,$color, IMG_ARC_PIE);
                 $cont=$cont+$ancho;
             }
+            ob_start();
             imagepng($img, $dir);
+            ob_clean();
+        }
+
+        function pintarBarrasOnFile($array, $dir) {
+            $alto=50;
+            foreach ($array as $moneda=>$repe) {
+                $image=imagecreate($repe*100,$alto);
+                imagecolorallocate($image,rand(0, 255), rand(0, 255), rand(0, 255));
+                ob_start();
+                imagepng($image,$dir."/$moneda.png");
+                ob_clean();
+            }
+
         }
     ?>
 </body>

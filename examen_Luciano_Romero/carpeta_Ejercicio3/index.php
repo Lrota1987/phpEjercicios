@@ -48,7 +48,7 @@
                     foreach ($barras as $ind=>$barra){
                         print "<img src='data:image/png;base64,$barra' /></br>";
                     }
-                    print "<h2>-------------------</h2>";
+                    echo "<h2>holaaaa</h2></br>";
                     $sectores=pintarSectores($arraytotal);
                     print "<img src='data:image/png;base64,$sectores' />";
                 }
@@ -58,16 +58,15 @@
             for ($i=0;$i<sizeof($arrayEst);$i++) {
                     
                 if ($arrayEst[$i] === "barras") {
-                    file_put_contents("./file/barras.png",pintarBarras($arraytotal) );
-                    
+                    pintarBarrasOnFile($arraytotal,"./file");
                 }
                 if ($arrayEst[$i] === "sectores") {
+                
                     pintarSectoresOnfile($arraytotal,"./file/sectores.png");
                 }
                 if ($arrayEst[$i] === "barras" && $arrayEst[$i] === "sectores") {
-                    pintarBarras($arraytotal);
-                    print "<h2>-------------------</h2>";
-                    pintarSectores($arraytotal);
+                    pintarBarrasOnFile($arraytotal,"./file");
+                    pintarSectoresOnfile($arraytotal,"./file/sectores.png");
                 }
             }
 
