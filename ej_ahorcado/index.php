@@ -10,7 +10,7 @@
     include '../utils/functions.php';
     spl_autoload_register('classAutoLoader');
     $miCabecera = new Cabecera("Hola");
-    echo $miCabecera->dibujar();
+    echo $miCabecera->cabecera;
     ?>
     <div class="contenedor">
         <form action="./ahorcado.php" class="contenedor__formulario-entrada" method="POST">
