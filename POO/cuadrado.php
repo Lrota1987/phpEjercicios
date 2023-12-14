@@ -18,7 +18,7 @@
         }
 
         public function estilos() {
-            return "<div style='width:".parent::getTamano()."px;
+            return "<div class='figura' style='width:".parent::getTamano()."px;
                         height:".parent::getTamano()."px;
                         background-color:".parent::getColor().";'></div>";
         }

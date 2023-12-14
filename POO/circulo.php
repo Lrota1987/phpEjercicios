@@ -18,8 +18,8 @@
         }
 
         public function estilos() {
-            return "<div style='width:".parent::getTamano()*2 ."px;
-                        height:".parent::getTamano()*2 ."px;
+            return "<div class='figura' style='width:".parent::getTamano() ."px;
+                        height:".parent::getTamano() ."px;
                         background-color:".parent::getColor().";
                         border-radius: 50%;'></div>";
         }

@@ -28,5 +28,27 @@
             print '</form>';
         print '</div>';
     ?>
+
+    <style>
+        .formCont {
+            width:100%;
+            height:100vh;
+            position:relative;
+            background-image: radial-gradient(#111ae2, black);
+        }
+
+        form {
+            padding: 15px;
+            position:absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 3px solid black;
+            text-align: center;
+            font-size: 25px;
+            background-color: #999;
+            color: #080e8a;
+        }
+    </style>
 </body>
 </html>

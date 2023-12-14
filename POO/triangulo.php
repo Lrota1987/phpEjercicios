@@ -17,7 +17,7 @@
         }
 
         public function estilos() {
-            return  "<div style=
+            return  "<div class='figura' style=
                         'width:".parent::getTamano()."px;
                         height:".parent::getTamano2()."px;
                         clip-path: polygon(50% 0, 100% 100%, 0 100%);

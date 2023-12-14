@@ -18,13 +18,50 @@
             }
         }
 
-        switch ($_SESSION['figura']) {
-            case "cuadrado":
-                $cuadrado = new Cuadrado($_SESSION['color'], $_SESSION['tamano']);
-                print $cuadrado->estilos();
-                print "<label>El área del ".$_SESSION['figura']." es: ".$cuadrado->area()." px.</label>";
-                break;
+        $classFigura=ucfirst($_SESSION['figura']);
+        if ($_SESSION['figura'] === "cuadrado" || $_SESSION['figura'] === "circulo") {
+            $figura = new $classFigura($_SESSION['color'], $_SESSION['tamano']);
         }
+        else {
+            $figura = new $classFigura($_SESSION['color'], $_SESSION['tamano'], $_SESSION['tamano2']);
+        }
+        print "<div class='contenedor'>";
+            print "<div class='contenedor2'>";
+                print $figura->__toString();
+                print $figura->estilos();
+                print "<label>El área del ".$_SESSION['figura']." es: ".$figura->area()." px.</label></br>";
+                print "<label>El perímetro del ".$_SESSION['figura']." es: ".$figura->perimetro()." px.</label>";
+            print "</div>";
+        print "</div>";
     ?>
+
+    <style>
+        body {
+            height: 100vh;
+            overflow: scroll;
+        }
+        .contenedor {
+            width:100%;
+            height:100%;
+            position:relative;
+            background-image: radial-gradient(#111ae2, black);
+        }
+        .contenedor2 {
+            padding: 15px;
+            position:absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 3px solid black;
+            text-align: center;
+            font-size: 25px;
+            background-color: #999;
+            color: #080e8a;
+        }
+
+        .figura {
+            margin: 0 auto;
+        }
+    </style>
 </body>
 </html>
