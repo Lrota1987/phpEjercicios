@@ -1,4 +1,5 @@
 <?php
+    namespace Clases;
 
     abstract class Figura {
 
@@ -36,5 +37,10 @@
 
     }
     
+
+
+
+
+
 
 ?>

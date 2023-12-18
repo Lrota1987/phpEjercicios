@@ -1,8 +1,10 @@
 <?php
-    class Cuadrado extends Figura {
-
-        public function __construct($col, $tam) {
-            parent::__construct($col, $tam);
+    namespace Clases;
+    use Clases\figura;
+    
+    class Rectangulo extends Figura {
+        public function __construct($col, $tam, $tam2) {
+            parent::__construct($col, $tam, $tam2);
         }
 
         public function __toString() {
@@ -10,19 +12,17 @@
         }
 
         public function area() {
-            return pow(parent::getTamano(), 2);
+            return (parent::getTamano() * parent::getTamano2());
         }
-        
+
         public function perimetro() {
-            return parent::getTamano()*4;
+            return (parent::getTamano()*2 + parent::getTamano2()*2);
         }
 
         public function estilos() {
             return "<div class='figura' style='width:".parent::getTamano()."px;
-                        height:".parent::getTamano()."px;
+                        height:".parent::getTamano2()."px;
                         background-color:".parent::getColor().";'></div>";
         }
-
-
     }
 ?>

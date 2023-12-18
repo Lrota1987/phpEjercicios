@@ -7,9 +7,14 @@
 </head>
 <body>
     <?php
-        include '../utils/functions.php';
-        spl_autoload_register('classAutoLoader');
+
         session_start();
+        require_once("./vendor/autoload.php");
+        use Clases\circulo;
+        use Clases\triangulo;
+        use Clases\rectangulo;
+        use Clases\cuadrado;
+        
         if (isset($_POST['color'])) {
             $_SESSION['color'] = $_POST['color'];
             $_SESSION['tamano'] = $_POST['tamano'];
@@ -18,7 +23,7 @@
             }
         }
 
-        $classFigura=ucfirst($_SESSION['figura']);
+        $classFigura="Clases\\".ucfirst($_SESSION['figura']);
         if ($_SESSION['figura'] === "cuadrado" || $_SESSION['figura'] === "circulo") {
             $figura = new $classFigura($_SESSION['color'], $_SESSION['tamano']);
         }
@@ -31,9 +36,33 @@
                 print $figura->estilos();
                 print "<label>El área del ".$_SESSION['figura']." es: ".$figura->area()." px.</label></br>";
                 print "<label>El perímetro del ".$_SESSION['figura']." es: ".$figura->perimetro()." px.</label>";
+                echo <<< EOT
+                <div class="boton">
+                    <form action="" method="POST">
+                        <button type="submit" name="final" value="nuevaF" >
+                            Nueva figura
+                        </button>
+                        <button type="submit" name="final" value="modF" >
+                            Modificar
+                        </button>
+                    </form>
+                </div>
+            EOT;
             print "</div>";
         print "</div>";
+
+
+        if (isset($_POST['final'])) {
+            if ($_POST['final'] === "nuevaF") {
+                header("Location:./index.html");
+            }
+            if ($_POST['final'] === "modF") {
+                header("Location:./eleccion.php");
+            }
+        }
     ?>
+
+
 
     <style>
         body {

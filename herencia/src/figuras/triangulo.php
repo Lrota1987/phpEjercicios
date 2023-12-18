@@ -1,4 +1,7 @@
 <?php
+    namespace Clases;
+    use Clases\figura;
+    
     class Triangulo extends Figura {
         public function __construct($col, $tam, $tam2) {
             parent::__construct($col, $tam, $tam2);
@@ -24,5 +27,4 @@
                         background-color:".parent::getColor().";' ></div>";
         }
     }
-    
 ?>

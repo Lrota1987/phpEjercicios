@@ -1,4 +1,7 @@
 <?php
+    namespace Clases;
+    use Clases\figura;
+    
     class Circulo extends Figura {
 
         public function __construct($col, $tam) {
@@ -25,6 +28,5 @@
         }
 
     }
-
 
 ?>
