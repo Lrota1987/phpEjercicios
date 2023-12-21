@@ -9,7 +9,7 @@
         }
 
         public function __toString() {
-            return "<label> Soy un ".get_class()."</label>";
+            return "<label> Soy un ".substr(get_class(), 7)."</label>";
         }
 
         public function area() {
@@ -21,8 +21,8 @@
         }
 
         public function estilos() {
-            return "<div class='figura' style='width:".parent::getTamano() ."px;
-                        height:".parent::getTamano() ."px;
+            return "<div class='figura' style='width:".parent::getTamano()*2 ."px;
+                        height:".parent::getTamano()*2 ."px;
                         background-color:".parent::getColor().";
                         border-radius: 50%;'></div>";
         }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Prueba de JavaScript</h2>
+    <h3>Sumatorio de 10 unidades a un número</h3>
+    <label>Tu resultado es: </label>
+    <label id="resultado"></label>
+
+    <script>
+        let numero = window.prompt("Introduzca un número");
+        let ok = false;
+        while (!ok) {
+            if (isNaN(numero)) {
+            numero = window.prompt("Introduzca un número");
+
+            }
+            else {
+                ok = true;
+            }
+        }
+        numero = parseInt(numero);
+        console.log(typeof numero);
+        while (ok) {
+            ok = window.confirm(`¿Quieres sumar 10 unidades al número?.Llevas ${numero}`);
+            if (ok) {
+                numero = numero + 10;
+                console.log(numero);
+            }
+            else {
+                window.alert("Chau");
+                
+            }
+            console.log(numero);
+            document.getElementById('resultado').innerHTML = numero;
+        }
+        
+    </script>
+
+</body>
+</html>

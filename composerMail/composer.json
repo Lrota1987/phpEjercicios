@@ -1,0 +1,22 @@
+{
+    "name": "daw2/composer-mail",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "marioraldaz",
+            "email": "130656068+marioraldaz@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Clases\\": "src"
+        }
+    }
+}

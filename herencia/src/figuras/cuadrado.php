@@ -10,7 +10,7 @@
         }
 
         public function __toString() {
-            return "<label> Soy un ".get_class()."</label>";
+            return "<label> Soy un ".substr(get_class(), 7)."</label>";
         }
 
         public function area() {

@@ -10,11 +10,7 @@
 
         session_start();
         require_once("./vendor/autoload.php");
-        use Clases\circulo;
-        use Clases\triangulo;
-        use Clases\rectangulo;
-        use Clases\cuadrado;
-        
+
         if (isset($_POST['color'])) {
             $_SESSION['color'] = $_POST['color'];
             $_SESSION['tamano'] = $_POST['tamano'];
