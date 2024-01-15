@@ -1,0 +1,22 @@
+{
+    "name": "luciano/luciano",
+    "description": "Clases de Desarrollo en entorno servidor",
+    "type": "project",
+    "license": "GPL",
+
+    "authors": [
+        {
+            "name": "Luciano Romero"
+           
+        }
+    ],
+    "require": {},
+    "config": {
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Clases\\": "src"
+        }
+    }
+}

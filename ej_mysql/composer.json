@@ -1,0 +1,19 @@
+{
+    "name": "daw2/ej_mysql",
+
+    "authors": [
+        {
+            "name": "Luciano Romero"
+           
+        }
+    ],
+    "require": {},
+    "config": {
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Clases\\": "src"
+        }
+    }
+}

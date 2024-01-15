@@ -20,6 +20,7 @@
         }
 
         $classFigura="Clases\\".ucfirst($_SESSION['figura']);
+        print "<h1>".$classFigura."</h1>";
         if ($_SESSION['figura'] === "cuadrado" || $_SESSION['figura'] === "circulo") {
             $figura = new $classFigura($_SESSION['color'], $_SESSION['tamano']);
         }
