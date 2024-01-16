@@ -29,6 +29,8 @@ class DBconnection {
         return $this->connect;
     }
 
+
+
     private function crearConect($config) {
         try {
             $connect = new PDO($this->dsn, $this->user, $this->pass);
@@ -49,7 +51,7 @@ class DBconnection {
                 $use_table->execute();
             }
 
-            $connect = new PDO($this->dsn, $this->user, $this->pass);
+            $connect = new PDO($this->dsn, $this->user, $this->pass, array(PDO::ATTR_PERSISTENT => true));
             }
        /* $tableExists = $connect->query("SELECT * FROM table"); // Comprobar si existen las tablas pero no es necesario
         if (!$tableExists) { 
