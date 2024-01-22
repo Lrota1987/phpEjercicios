@@ -74,10 +74,10 @@ class Book  extends DBConnection{
 
         print "<tr COLSPAN='9'>";
         print "<form action='./anadirBook.php' method='POST'>";
-        print "<td COLSPAN='5' class='last-file'><button type='submit' name='anadirB' class='anadirB' value=true>AÑADIR LIBRO</button></td>";
+        print "<td COLSPAN='5' class='last-file'><button type='submit' name='anadirB' class='botonInf' value=true>AÑADIR LIBRO</button></td>";
         print "</form>";
-        print "<form action='./update.php' method='POST'>";
-        print "<td COLSPAN='4' class='last-file'><button type='submit' name='clientes' class='clientes' value=true>CLIENTES</button></td>";
+        print "<form action='./cust_viewer.php' method='POST'>";
+        print "<td COLSPAN='4' class='last-file'><button type='submit' name='clientes' class='botonInf' value=true>CLIENTES</button></td>";
         print "</form>";
         print "</tr>";
 
@@ -104,6 +104,9 @@ class Book  extends DBConnection{
             }
             .details {
                 background-color: skyblue;
+            }
+            .botonInf {
+                background-color: thistle;
             }
         </style>
         EOT;
