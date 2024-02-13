@@ -29,7 +29,10 @@ class Customers extends DBConnection {
         
         print "<table>
                 <tr>
+<<<<<<< HEAD
                     <td>COMPRA</td>
+=======
+>>>>>>> 740696b99b8acfc6d8c29ee13818acc843b6f160
                     <td>ID</td>
                     <td>FIRSTNAME</td>
                     <td>SURNAME</td>
@@ -41,6 +44,7 @@ class Customers extends DBConnection {
         while ($fila = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $id=$fila['id'];
             print "<tr>";
+<<<<<<< HEAD
             print "<form action='./compraBook.php' method='POST'>";
             print "<td><button type='submit' class='compraBook' name='compraBook' value='$id'>COMPRA</button></td>";
             print "</form>";
@@ -51,6 +55,15 @@ class Customers extends DBConnection {
             print "<td><button type='submit' name='actualizar' class='actualizar' value='$id'>ACTUALIZAR</button></td>";
             print "</form>";
             print "<form action='./deleteCust.php' method='POST'>";
+=======
+            foreach ($fila as $key => $item) {
+                print "<td>".$item."</td>";
+            }
+            print "<form action='./update.php' method='POST'>";
+            print "<td><button type='submit' name='actualizar' class='actualizar' value='$id'>ACTUALIZAR</button></td>";
+            print "</form>";
+            print "<form action='./delete.php' method='POST'>";
+>>>>>>> 740696b99b8acfc6d8c29ee13818acc843b6f160
             print "<td><button type='submit' class='eliminar' name='eliminar' value='$id'>ELIMINAR</button></td>";
             print "</form>";
             print "</tr>";
@@ -58,7 +71,11 @@ class Customers extends DBConnection {
         }
 
         print "<tr COLSPAN='7'>";
+<<<<<<< HEAD
         print "<form action='./anadirCust.php' method='POST'>";
+=======
+        print "<form action='./anadirBook.php' method='POST'>";
+>>>>>>> 740696b99b8acfc6d8c29ee13818acc843b6f160
         print "<td COLSPAN='4' class='last-file'><button type='submit' name='anadirB' class='botonInf' value=true>AÑADIR CLIENTE</button></td>";
         print "</form>";
         print "<form action='./index.php' method='POST'>";
@@ -93,14 +110,18 @@ class Customers extends DBConnection {
                 .botonInf {
                     background-color: thistle;
                 }
+<<<<<<< HEAD
                 .compraBook {
                     background-color: gold;
                 }
+=======
+>>>>>>> 740696b99b8acfc6d8c29ee13818acc843b6f160
             </style>
             EOT;
         
 
 }
+<<<<<<< HEAD
 
 public function actualizar($id, $firstname, $surname, $email, $type) {
     $stmt = parent::getConnect()->prepare('UPDATE customer SET firstname = ?, surname = ?, email = ?, typee = ? WHERE id=?');
@@ -129,6 +150,8 @@ public function deleteCust ($id) {
     $stmt2->execute();
     header('Location:./cust_viewer.php');
 }
+=======
+>>>>>>> 740696b99b8acfc6d8c29ee13818acc843b6f160
 }
 
 ?>

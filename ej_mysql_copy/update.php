@@ -7,8 +7,14 @@
 </head>
 <body>
     <?php
+<<<<<<< HEAD
     require_once("./vendor/autoload.php");
     if (!isset($_POST['isbn'])) {
+=======
+
+    if (!isset($_POST['isbn'])) {
+        require_once("./vendor/autoload.php");
+>>>>>>> 740696b99b8acfc6d8c29ee13818acc843b6f160
         $objBook = new Clases\Book("", "", "", "", "");
         
         $values = $objBook->selectBook($_POST['actualizar']);

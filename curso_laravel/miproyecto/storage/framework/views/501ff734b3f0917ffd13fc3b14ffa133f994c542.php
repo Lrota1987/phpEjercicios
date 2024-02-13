@@ -1,0 +1,1 @@
+Hello World<?php /**PATH C:\wamp64\www\luciano\curso_laravel\miproyecto\resources\views/landing/about.blade.php ENDPATH**/ ?>

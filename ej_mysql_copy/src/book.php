@@ -80,6 +80,7 @@ class Book  extends DBConnection{
         print "<td COLSPAN='4' class='last-file'><button type='submit' name='clientes' class='botonInf' value=true>CLIENTES</button></td>";
         print "</form>";
         print "</tr>";
+<<<<<<< HEAD
 
         print "</table>";
 
@@ -146,6 +147,8 @@ class Book  extends DBConnection{
         print "<td COLSPAN='4' class='last-file'><button type='submit' name='volver' class='botonInf' value=true>VOLVER</button></td>";
         print "</form>";
         print "</tr>";
+=======
+>>>>>>> 740696b99b8acfc6d8c29ee13818acc843b6f160
 
         print "</table>";
 
@@ -268,6 +271,7 @@ class Book  extends DBConnection{
          }
     }
 
+<<<<<<< HEAD
     public function actualizarStock($id, $stock) {
         $stock = $stock -1;
         $stmt = parent::getConnect()->prepare('UPDATE book SET stock = ? WHERE id=?');
@@ -281,3 +285,8 @@ class Book  extends DBConnection{
 ?>        
 
 
+=======
+
+}
+?>          
+>>>>>>> 740696b99b8acfc6d8c29ee13818acc843b6f160
