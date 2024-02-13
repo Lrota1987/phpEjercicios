@@ -1,0 +1,27 @@
+{
+    "name": "user/user",
+    "type": "project",
+    "require": {
+        "philo/laravel-blade": "^3.1",
+        "windwalker/edge": "^4.0",
+        "fakerphp/faker": "^1.23"
+    },
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "Clases\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "luciano",
+            "email": "luciano@correo.es"
+        }
+    ],
+    "config": {
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+    }
+}
